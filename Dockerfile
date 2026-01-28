@@ -8,6 +8,9 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 4000
+# Render uses port 10000 internally
+ENV PORT=10000
+
+EXPOSE 10000
 
 CMD ["npm", "start"]
